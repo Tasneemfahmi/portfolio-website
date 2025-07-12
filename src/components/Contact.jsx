@@ -24,7 +24,10 @@ export function Contact({ handleContactClick }) {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
-              onClick={handleContactClick}
+              onClick={(e) => {
+                e.preventDefault();
+                window.location.href = 'mailto:tasneemfahmimadkour@gmail.com';
+              }}
               className="bg-slate-dark hover:bg-slate-dark/90 text-ivory px-8 py-4 rounded-full font-semibold text-lg transform hover:scale-105 transition-all duration-300 shadow-lg shadow-slate/20"
             >
               <Mail className="w-5 h-5 mr-2" />
@@ -32,10 +35,10 @@ export function Contact({ handleContactClick }) {
             </Button>
             <p className="text-slate-light/70">or</p>
             <a
-              href="mailto:hello@tasneemfahmi.xyz"
+              href="mailto:tasneemfahmimadkour@gmail.com"
               className="text-rose-light hover:text-rose-dark font-semibold text-lg transition-colors duration-300"
             >
-              hello@tasneemfahmi.xyz
+              tasneemfahmimadkour@gmail.com
             </a>
           </div>
         </motion.div>

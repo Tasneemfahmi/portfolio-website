@@ -1,29 +1,48 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ExternalLink, Github } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import React from "react";
+import { motion } from "framer-motion";
+import { ExternalLink, Github } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import c_cube from "../assets/C-Cube.png";
+import medease from "../assets/MedEase.png";
+import stories from "../assets/Stories.png";
 
-export function Projects({ handleContactClick }) {
+export function Projects() {
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'Full-stack e-commerce solution with React frontend, Node.js backend, and mobile app.',
-      tech: ['React', 'Node.js', 'PostgreSQL', 'React Native'],
-      image: 'Modern e-commerce platform with shopping cart and payment integration'
+      title: "C³ (C Cube) – Handmade Marketplace",
+      description:
+        "An e-commerce platform built for Egyptian handmade sellers, offering localized payments, shop pages, and product variant support. Built with React, Node.js, and a responsive web frontend.",
+      tech: ["React", "Node.js", "PostgreSQL", "Figma"],
+      image: c_cube,
+      Github: "https://github.com/Tasneemfahmi/c-cube-eg",
+      Live: "https://c-cube-eg.com",
     },
     {
-      title: 'AI-Powered Analytics Dashboard',
-      description: 'Real-time analytics dashboard with machine learning insights and predictive modeling.',
-      tech: ['Vue.js', 'Python', 'TensorFlow', 'MongoDB'],
-      image: 'Sleek analytics dashboard with charts and AI insights'
+      title: "MedEase Doctor Interface",
+      description:
+        "A role-based medical dashboard built for doctors to manage patients, track clinical stats, and customize settings in a responsive, real-time environment.",
+      tech: ["React", "Redux", "Tailwind CSS", "Recharts"],
+      image: medease,
+      Github: "https://github.com/MadEase-Graduation-Project/Front_End",
+      Live: "https://front-end-mauve-ten.vercel.app/",
     },
-    {
-      title: 'Cross-Platform Social App',
-      description: 'Social networking app built with Flutter, featuring real-time messaging and content sharing.',
-      tech: ['Flutter', 'Firebase', 'Dart', 'Cloud Functions'],
-      image: 'Modern social media app interface with messaging features'
-    }
+{
+  title: "Inkspire",
+  description:
+    "An elegant story organization app for writers to store, explore, and connect story ideas with Spotify playlists, characters, and moodboards.",
+  tech: ["React", "Tailwind CSS", "Node.js", "Firebase"],
+  image: stories,
+  Github: " ",
+  Live: " ",
+}
+
   ];
+
+  const handleLiveClick = () => {
+    window.open("https://c-cube.vercel.app/", "_blank");
+  };
+
+  const handleGithubClick = () => {};
 
   return (
     <section id="projects" className="py-20 px-6 bg-soft-bg">
@@ -36,10 +55,14 @@ export function Projects({ handleContactClick }) {
           className="text-center mb-16"
         >
           <h2 className="text-4xl lg:text-5xl font-bold text-slate-dark mb-6">
-            Featured <span className="bg-gradient-to-r from-rose via-pale_blue to-sage bg-clip-text text-transparent animate-gradient">Projects</span>
+            Featured{" "}
+            <span className="bg-gradient-to-r from-rose via-pale_blue to-sage bg-clip-text text-transparent animate-gradient">
+              Projects
+            </span>
           </h2>
           <p className="text-xl text-slate-light max-w-3xl mx-auto">
-            A showcase of my work across different platforms and technologies, demonstrating my full-stack capabilities.
+            A showcase of my work across different platforms and technologies,
+            demonstrating my full-stack capabilities.
           </p>
         </motion.div>
 
@@ -54,17 +77,22 @@ export function Projects({ handleContactClick }) {
               className="bg-white rounded-2xl overflow-hidden border border-slate/10 hover:border-rose/50 transition-all duration-300 shadow-sm hover:shadow-xl card-hover"
             >
               <div className="relative h-48 overflow-hidden">
-                <img 
+                <img
                   alt={`Screenshot of ${project.title}`}
                   className="w-full h-full object-cover"
-                  src="https://images.unsplash.com/photo-1595872018818-97555653a011" />
+                  src={project.image}
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
-              
+
               <div className="p-6">
-                <h3 className="text-xl font-bold text-slate-dark mb-3">{project.title}</h3>
-                <p className="text-slate-light mb-4 leading-relaxed">{project.description}</p>
-                
+                <h3 className="text-xl font-bold text-slate-dark mb-3">
+                  {project.title}
+                </h3>
+                <p className="text-slate-light mb-4 leading-relaxed">
+                  {project.description}
+                </p>
+
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.tech.map((tech) => (
                     <span
@@ -75,10 +103,10 @@ export function Projects({ handleContactClick }) {
                     </span>
                   ))}
                 </div>
-                
+
                 <div className="flex space-x-3">
                   <Button
-                    onClick={handleContactClick}
+                    onClick={() => window.open(project.Live, "_blank")}
                     size="sm"
                     className="bg-slate-dark hover:bg-slate-dark/90 text-ivory flex-1"
                   >
@@ -86,7 +114,7 @@ export function Projects({ handleContactClick }) {
                     View Live
                   </Button>
                   <Button
-                    onClick={handleContactClick}
+                    onClick={() => window.open(project.Github, "_blank")}
                     size="sm"
                     variant="outline"
                     className="border-slate text-slate hover:bg-slate hover:text-ivory"

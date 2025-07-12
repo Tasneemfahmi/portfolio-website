@@ -18,7 +18,7 @@ export function Navigation() {
             animate={{ opacity: 1, x: 0 }}
             className="hidden md:flex space-x-8"
           >
-            {['About', 'Projects', 'Tech Stack', 'Contact'].map((item) => (
+            {['About', 'Tech Stack', 'Projects', 'Contact'].map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase().replace(' ', '-')}`}

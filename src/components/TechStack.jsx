@@ -4,12 +4,13 @@ import { Code, Database, Smartphone, Globe, Server, Palette } from 'lucide-react
 
 export function TechStack() {
   const techStack = [
-    { name: 'Frontend', icon: Globe, skills: ['React', 'Vue.js', 'TypeScript', 'Tailwind CSS', 'Next.js'] },
-    { name: 'Backend', icon: Server, skills: ['Node.js', 'Python', 'Express', 'FastAPI', 'GraphQL'] },
+    { name: 'Frontend', icon: Globe, skills: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'Next.js', 'Framer-motion'] },
+    { name: 'Backend', icon: Server, skills: ['Node.js','Express.js', 'Nest.js'] },
     { name: 'Mobile', icon: Smartphone, skills: ['React Native', 'Flutter', 'Swift', 'Kotlin'] },
-    { name: 'Database', icon: Database, skills: ['PostgreSQL', 'MongoDB', 'Redis', 'Supabase'] },
-    { name: 'DevOps', icon: Code, skills: ['Docker', 'AWS', 'CI/CD', 'Kubernetes'] },
-    { name: 'Design', icon: Palette, skills: ['Figma', 'Adobe XD', 'UI/UX', 'Prototyping'] }
+    { name: 'Database', icon: Database, skills: ['PostgreSQL', 'MongoDB', 'Firebase'] },
+    // { name: 'DevOps', icon: Code, skills: ['Docker', 'AWS', 'CI/CD', 'Kubernetes'] },
+    { name: 'Design', icon: Palette, skills: ['Figma', 'Adobe XD', 'UI/UX', 'Prototyping'] },
+    { name: 'Other', icon: Code, skills: ['Git', 'GitHub'] }
   ];
 
   return (
