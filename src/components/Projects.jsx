@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import c_cube from "../assets/C-Cube.png";
-import medease from "../assets/MedEase.png";
+import medease from "../assets/Medease.png";
 import stories from "../assets/Stories.png";
 
 export function Projects() {
