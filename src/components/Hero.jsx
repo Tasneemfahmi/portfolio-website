@@ -4,6 +4,7 @@ import { Mail, Download, Github, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import resume from "../../public/Tasneem-Resume.pdf";
 import tasneem from "../assets/Tasneem.jpg"
+import tasneem2 from "../assets/Tasneem2.jpg"
 
 export function Hero({ handleContactClick, handleResumeDownload }) {
   return (
@@ -118,7 +119,7 @@ export function Hero({ handleContactClick, handleResumeDownload }) {
               <img
                 alt="Professional headshot of Tasneem Fahmi"
                 className="relative z-10 w-full rounded-2xl shadow-xl border-4 border-white"
-                src={tasneem}
+                src={tasneem2}
               />
             </div>
           </motion.div>
